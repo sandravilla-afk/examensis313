@@ -1,0 +1,18 @@
+<div class="menu">
+  <h3 class="menu-title">Celulares</h3>
+
+  <div *ngIf="loading" class="muted">Cargando...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <ul *ngIf="!loading && !error">
+    <li *ngFor="let c of celulares">
+      <div class="item">
+        <strong class="marca">{{ c.marca }}</strong>
+        <span class="modelo">{{ c.modelo }}</span>
+        <span class="color">Color: {{ c.color }}</span>
+        <span class="almacenamiento">Alm: {{ c.almacenamiento }}</span>
+        <span class="precio">Precio: {{ c.precio }}</span>
+      </div>
+    </li>
+  </ul>
+</div>

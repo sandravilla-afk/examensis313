@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Bitcount Prop Single';
+  src: url('/assets/fonts/BitcountPropSingle.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-primary: #11baac;
+  --color-accent: #d89845;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+
+  --font-title: 'Bitcount Prop Single', monospace;
+  --font-base: 'Roboto Mono', monospace;
+}
+
+:root.dark {
+  --bg: #0e0f12;
+  --text: #f2f2f2;
+  --muted: #a0a0a0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  border-right: 1px dashed var(--muted);
+}
+
+.content {
+  padding: 0 1rem;
+}
+
+.card {
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(0,0,0,0.02);
+}

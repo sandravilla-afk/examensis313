@@ -1,0 +1,27 @@
+.home-banner {
+  /* Fondo con imagen de tecnología */
+  background-image: url('https://copilot.microsoft.com/th/id/BCO.ce1d1f2c-250b-4b6e-8036-ca3c03ea3380.png'); 
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Capa oscura encima de la imagen para contraste */
+.overlay {
+  background-color: rgba(0,0,0,0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texto principal */
+.title {
+  color: white;
+  font-size: 3rem;
+  font-family: var(--font-title);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
